@@ -106,6 +106,31 @@ class BookingRoom{
     }
 
 }
+
+class RoomKey{
+    Room room;
+    private int keyid;
+    private String password;
+
+    RoomKey(Room room , int keyid , String password){
+        this.room=room;
+        this.keyid=keyid;
+        this.password=password;
+    }
+    Room getroom(){
+        return this.room;
+    }
+    
+    int getkeyid(){
+        return this.keyid;
+    }
+    String getpassword(){
+        return this.password;
+    }
+
+
+}
+
 public class HotelManagementSystem {
     public static void main(String[] args) {
         //Hotel
@@ -122,6 +147,8 @@ public class HotelManagementSystem {
         BookingRoom bookingroom=new BookingRoom(room, "jinks", 2);
         System.out.println(bookingroom.getguestName()+ " picked room "+ bookingroom.getRoom().roomNumber+ " for nights = "+ bookingroom.getnights());
 
-
+        //keyid
+        RoomKey roomkey= new RoomKey(room, 44, "passion");
+        System.out.println(roomkey.getroom().roomNumber+ " key for the room is " + roomkey.getkeyid());
     }
 }
