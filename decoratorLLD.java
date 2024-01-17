@@ -40,7 +40,8 @@ class Peanuts extends AddDecorator{
     Salad salad;
 
     public Peanuts(Salad s) {
-        salad = s;    }
+        salad = s;    
+    }
     public String getdescription(){
         return salad.getdescription()+" ,Peanuts";
     }
