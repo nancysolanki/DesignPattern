@@ -14,7 +14,7 @@ class SingletonObject{
        }
 }
 //but this method doesn't work for multithreading as what if two threads try to create object at same time?
-// So we can lock that part of code that if one is accessing it other cannot
+// So we can lock that part of code that if one is accessing it other cannot using mutex
 
 public class SingletonPattern {
     public static void main(String[] args) {
